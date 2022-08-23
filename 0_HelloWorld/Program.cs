@@ -14,10 +14,10 @@ string myString = "This is how to define a string variable!";
 //Reading a string from the console
 myString = Console.ReadLine();
 
-Console.WriteLine("Hello " + myString + " How are you?");
+Console.WriteLine("Hello " + myString + ", how are you?");
 Console.ReadLine();
 
-Console.WriteLine(myString + " Wold you like to do some math");
+Console.WriteLine(myString + "  you like to do some math");
 
 string answer = Console.ReadLine();
 
@@ -29,7 +29,7 @@ if (answer == "yes")
 
 if (WantToDoMath == true)
 {
-    Console.WriteLine("Wold you like to add, subtract, multiply or divide?");
+    Console.WriteLine("Would you like to add, subtract, multiply or divide?");
     string mathoperation = Console.ReadLine();
 
     switch (mathoperation)
