@@ -8,8 +8,22 @@ Console.ForegroundColor = ConsoleColor.Black;
 Console.WindowHeight = 40;
 
 //Presentation
-Console.WriteLine("Hello Chosen One");
-Console.WriteLine("What is your name?");
+
+string TypeWriter(string input){
+    if(input.Length > 0){
+        string firstCharacter = input.Substring(0, 1);
+        string restOfInput = input.Remove(0, 1);
+        Console.Write(firstCharacter);
+        Thread.Sleep(15);
+        return TypeWriter(restOfInput);
+    }else{
+        return "";
+            }
+}
+TypeWriter("Hello my user \nI am you personalized personal computer \nI do know your name, but do you? Let's see if you are right \n");
+
+//Console.WriteLine("Hello my user \nI am you personalized personal computer");
+//Console.WriteLine("I do know your name, but do you? Let's see if you are right");
 
 //<Type> <Name> = <Value> ;
 string myString = "This is how to define a string variable!";
@@ -21,15 +35,20 @@ string myString = "This is how to define a string variable!";
 
 myString = Console.ReadLine();
 
-Console.WriteLine("Hello " + myString + ", how are you?");
+TypeWriter("Of course, your name is ");
+Console.WriteLine(myString); 
+TypeWriter("How are you? \n");
+
+//Console.WriteLine("Of course, your name is " + myString + ", how are you?");
 Console.ReadLine();
 
-Console.WriteLine(myString + "  you like to do some math");
+Thread.Sleep(950);
+Console.WriteLine(myString + " would you like to do some math? (y/n)");
 
 string answer = Console.ReadLine();
 
 bool WantToDoMath = false;
-if (answer == "yes")
+if (answer == "y")
 {
     WantToDoMath = true;
 }
@@ -47,62 +66,62 @@ while (is_calculating)
     switch (mathoperation)
     {
         case "add":
-int addnum01;
-int addnum02;
+double addnum01;
+double addnum02;
 
 Console.WriteLine("Write a number");
-addnum01 = Convert.ToInt32( Console.ReadLine() );
+addnum01 = Convert.ToDouble( Console.ReadLine() );
 
 Console.WriteLine("Write a second number");
-addnum02 = Convert.ToInt32( Console.ReadLine() );
+addnum02 = Convert.ToDouble( Console.ReadLine() );
 
-int addresult = addnum01 + addnum02;
+double addresult = addnum01 + addnum02;
 Console.WriteLine("The result is " + addresult);
 
             break;
         case "subtract":
-int subnum01;
-int subnum02;
+double subnum01;
+double subnum02;
 
 Console.WriteLine("Write a number");
-subnum01 = Convert.ToInt32( Console.ReadLine() );
+subnum01 = Convert.ToDouble( Console.ReadLine() );
 
 Console.WriteLine("Write a second number");
-subnum02 = Convert.ToInt32( Console.ReadLine() );
+subnum02 = Convert.ToDouble( Console.ReadLine() );
 
-int subresult = subnum01 - subnum02;
+double subresult = subnum01 - subnum02;
 Console.WriteLine("The result is " + subresult);
             break;
 
         case "multiply":
- int mulnum01;
-int mulnum02;
+ double mulnum01;
+double mulnum02;
 
 Console.WriteLine("Write a number");
-mulnum01 = Convert.ToInt32( Console.ReadLine() );
+mulnum01 = Convert.ToDouble( Console.ReadLine() );
 
 Console.WriteLine("Write a second number");
-mulnum02 = Convert.ToInt32( Console.ReadLine() );
+mulnum02 = Convert.ToDouble( Console.ReadLine() );
 
-int mulresult = mulnum01 * mulnum02;
+double mulresult = mulnum01 * mulnum02;
 Console.WriteLine("The result is " + mulresult);
             break;
 
         case "divide":
- int divnum01;
-int divnum02;
+double divnum01;
+double divnum02;
 
 Console.WriteLine("Write a number");
-divnum01 = Convert.ToInt32( Console.ReadLine() );
+divnum01 = Convert.ToDouble( Console.ReadLine() );
 
 Console.WriteLine("Write a second number");
-divnum02 = Convert.ToInt32( Console.ReadLine() );
+divnum02 = Convert.ToDouble( Console.ReadLine() );
 
-int divresult = divnum01 / divnum02;
+double divresult = divnum01 / divnum02;
 Console.WriteLine("The result is " + divresult);
             break;
     }
-    Console.WriteLine("Do you want to continue y/n?");
+    Console.WriteLine("Do you want to continue? (y/n)");
     string continue_string = Console.ReadLine();
     if (continue_string == "n")
     {
@@ -251,6 +270,13 @@ for (int i = 0; i < 10; i++)
 Console.WriteLine("The result is " + result);
 
  //== ecual to , != not ecual, && and, || or
+
+// data / number types 
+
+int:     	32-bit signed integer 	                        -2,147,483,648 to 2,147,483,647 
+float: 	    32-bit Single-precision floating point type 	-3.402823e38 to 3.402823e38 
+double: 	64-bit double-precision floating point type 	-1.79769313486232e308 to 1.79769313486232e308 
+
  */
 
 #endregion
